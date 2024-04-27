@@ -158,18 +158,18 @@ void* os()
     osname = sysInfo.sysname;
   }
 
-  else if ( strncmp ( sysInfo.sysname, "NetBSD", 7 ) == 0 )
+  else if ( strncmp ( sysInfo.sysname, "NetBSD", 6 ) == 0 )
   {
-    info.col1 = BWHITE " \\\\ " BMAGENTA "`-______,----__";
-    info.col2 = BWHITE "  \\\\        " BMAGENTA "__,---`_";
-    info.col3 = BWHITE "   \\\\       " BMAGENTA "`.____    ";
-    info.col4 = BWHITE "    \\\\ " BMAGENTA "-______,----`-";
-    info.col5 = BWHITE "     \\\\               ";
-    info.col6 = BWHITE "      \\\\              ";
-    info.col7 = BWHITE "       \\\\             ";
+    info.col1 = BMAGENTA "                              \n";
+    info.col2 = BWHITE " \\\\" BMAGENTA "`-______,----__  ";
+    info.col3 = BWHITE "  \\\\        " BMAGENTA "__,---`_";
+    info.col4 = BWHITE "   \\\\     " BMAGENTA "`.____    ";
+    info.col5 = BWHITE "    \\\\" BMAGENTA "-______,----`-";
+    info.col6 = BWHITE "     \\\\" BMAGENTA "             ";
+    info.col7 = BWHITE "      \\\\" BMAGENTA "            ";
     info.col8 = BWHITE "";
     info.getPkgCount =
-      "/bin/ls -1 /var/db/pkg/ | wc -l | tr -d ' '";
+      "pkg_info | wc -l | tr -d ' '";
   }
 
   pkgCount = pipeRead ( info.getPkgCount );
