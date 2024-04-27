@@ -35,15 +35,15 @@ This is my attempt at a serious independent project.
 + More to be implemented soon
 
 *TODO*
-Create CONFIG.md file with in depth guide to customisation 
-Incorporate OpenBSD's [[https://man.openbsd.org/pledge][pledge(4)]] 
-Add more BSD-Specific features, such as boot environment backup
-information on FreeBSD targets, bhyve/vmm guest system resource usage.
+- Create CONFIG.org file with in depth guide to customisation 
+- Incorporate OpenBSD's [[https://man.openbsd.org/pledge][pledge(4)]] 
+- Add more BSD-Specific features, such as boot environment backup
+- information on FreeBSD targets, bhyve/vmm guest system resource usage.
 
 *Thanks*
-All the [[https://github.com/13-CF/afetch/graphs/contributors][contributors of the original afetch]] <3
-The original project author [[https://github.com/13-CF][13-CF]] :3
-[[https://github.com/dylanaraps/neofetch][neofetch]]
-[[https://github.com/jschx/ufetch][ufetch]]
-[[https://github.com/ThatOneCalculator/NerdFetch][nerdfetch]]
-[[https://gitlab.com/bit9tream/bitfetch][bitfetch]]
+- All the [[https://github.com/13-CF/afetch/graphs/contributors][contributors of the original afetch]] <3
+- The original project author [[https://github.com/13-CF][13-CF]] :3
+- [[https://github.com/dylanaraps/neofetch][neofetch]]
+- [[https://github.com/jschx/ufetch][ufetch]]
+- [[https://github.com/ThatOneCalculator/NerdFetch][nerdfetch]]
+- [[https://gitlab.com/bit9tream/bitfetch][bitfetch]]
