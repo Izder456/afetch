@@ -5,23 +5,23 @@ LDFLAGS = -lpthread
 DEBUGFLAGS = -g -Og -std=c99 -Wall -Wextra
 PREFIX ?= /usr/local
 
-all: afetch
+all: bfetch
 
-afetch: ${SRC} src/config.h src/colour.h
-	${CC} ${CFLAGS} ${SRC} ${LDFLAGS} -o afetch
+bfetch: ${SRC} src/config.h src/colour.h
+	${CC} ${CFLAGS} ${SRC} ${LDFLAGS} -o bfetch
 
 debug:
-	${CC}  ${DEBUGFLAGS} ${SRC} ${LDFLAGS} -o afetch-debug
+	${CC}  ${DEBUGFLAGS} ${SRC} ${LDFLAGS} -o bfetch-debug
 
 clean:
-	rm -rf afetch afetch.dSYM afetch-debug afetch-debug.dSYM
+	rm -rf bfetch bfetch.dSYM bfetch-debug bfetch-debug.dSYM
 
-install: afetch
+install: bfetch
 	mkdir -p ${DESTDIR}${PREFIX}/bin
-	cp afetch ${DESTDIR}${PREFIX}/bin
-	chmod 711 ${DESTDIR}${PREFIX}/bin/afetch
+	cp bfetch ${DESTDIR}${PREFIX}/bin
+	chmod 711 ${DESTDIR}${PREFIX}/bin/bfetch
 
 uninstall:
-	rm -f ${DESTDIR}${PREFIX}/bin/afetch
+	rm -f ${DESTDIR}${PREFIX}/bin/bfetch
 
 .PHONY: all clean debug install uninstall

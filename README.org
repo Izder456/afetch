@@ -1,0 +1,49 @@
+#+TITLE: bfetch
+#+SUBTITLE: Simple system info for BSDs
+#+AUTHOR: izzy Meyer <izder456@disroot.org>
+
+/fork of [[https://github.com/13-CF/afetch][afetch]]*/
+
+* Why fork to bfetch?
+
+I dunno, it was an excuse to learn more C. I plan to incorporate more
+BSD-specific things, such as OpenBSD's
+[[https://man.openbsd.org/pledge][pledge(4)]], or fetching boot
+environment backup information on FreeBSD. Things of that nature.
+
+This fetch program seemed pretty well written, good job 13-CF, and
+contributors! I don't plan to PR any of this stuff back into afetch.
+This is my attempt at a serious independent project.
+
+** Requirements
+
++ A C compiler
++ A compatible C standard library implementation
++ pthreads
+
+** Systems supported
+
++ FreeBSD
++ NetBSD
++ OpenBSD
+
+** Configuration options
+
++ Custom text for each seperate row of info
++ Force upper/lowercase text
++ Option to print colour blocks, and choose a character for the block
++ More to be implemented soon
+
+*TODO*
+Create CONFIG.md file with in depth guide to customisation 
+Incorporate OpenBSD's [[https://man.openbsd.org/pledge][pledge(4)]] 
+Add more BSD-Specific features, such as boot environment backup
+information on FreeBSD targets, bhyve/vmm guest system resource usage.
+
+*Thanks*
+All the [[https://github.com/13-CF/afetch/graphs/contributors][contributors of the original afetch]] <3
+The original project author [[https://github.com/13-CF][13-CF]] :3
+[[https://github.com/dylanaraps/neofetch][neofetch]]
+[[https://github.com/jschx/ufetch][ufetch]]
+[[https://github.com/ThatOneCalculator/NerdFetch][nerdfetch]]
+[[https://gitlab.com/bit9tream/bitfetch][bitfetch]]
