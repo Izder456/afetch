@@ -1,0 +1,8 @@
+indent=spaces=2
+convert-tabs
+max-code-length=72
+style=bsd
+pad-comma
+pad-paren
+pad-oper
+indent-cases

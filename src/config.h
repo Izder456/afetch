@@ -8,7 +8,7 @@
 /* Those two options are mutually exclusive.
  * Either set one to 'true' or both to 'false'. */
 #define ForceLowerCase false
-#define ForceUpperCase false 
+#define ForceUpperCase false
 
 /* See options in colour.h file */
 #define TextColour WHITE
