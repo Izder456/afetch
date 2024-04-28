@@ -5,6 +5,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#ifdef __Linux__
+#include <bsd/string.h>
+#endif
 #include <sys/utsname.h>
 #include <time.h>
 
@@ -152,7 +155,8 @@ void *os()
 		}
 		if (osname == NULL)
 			osname = malloc(512);
-		strcpy(osname, newContents);
+		size_t osname_size = sizeof(osname);
+		strlcpy(osname, newContents, osname_size);
 		free(newContents);
 		/* end */
 		if (strncmp(osname, "Alpine Linux", 12) == 0) {
@@ -459,10 +463,11 @@ void *os()
 		    "dpkg -l | tail -n+6 | wc -l";
 
 			char *iosVer = malloc(1024);
-			strcpy(iosVer, "iOS ");
+			size_t iosVer_size = sizeof(iosVer);
+			strlcpy(iosVer, "iOS ", iosVer_size);
 			char *productVer = pipeRead("sw_vers -productVersion");
 
-			strcat(iosVer, productVer);
+			strlcat(iosVer, productVer, iosVer_size);
 			free(productVer);
 			osname = iosVer;
 			free(iosVer);
@@ -471,10 +476,12 @@ void *os()
 			    "ls /usr/local/Cellar/* | grep ':' | wc -l | xargs";
 
 			char *macVer = malloc(64);
-			strcpy(macVer, "macOS ");
+            size_t macVer_size = sizeof(macVer);
+
+			strlcpy(macVer, "macOS ", macVer_size);
 			char *productVer = pipeRead("sw_vers -productVersion");
 
-			strcat(macVer, productVer);
+			strlcat(macVer, productVer, macVer_size);
 			free(productVer);
 			osname = macVer;
 			free(macVer);

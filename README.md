@@ -17,6 +17,7 @@ afetch is written in C99, meaning that it should be able to be compiled with alm
 *  A C compiler
 *  A <a href="https://en.wikipedia.org/wiki/C_POSIX_library">compatible C standard library</a> implementation
 *  pthreads
+*  libbsd (for strlcpy() & strcat())
 
 **Package count supported**
 
